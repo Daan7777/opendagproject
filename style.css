@@ -31,4 +31,12 @@ input[type=submit] {
 	border-radius: 4px;
 	box-sizing: border-box;
   }
- 
+  .container {
+	background-color: #1b7650;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0,3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+
+  }
