@@ -49,8 +49,13 @@
                 <div class="o-container">
 
                     <ul class="lob-menu-container">
-                        <li>
-                            <a href="https://opkop.nl/lob/beroepenmagazine" target="_blank">
+               
+               
+
+               
+               
+                         <li>
+                            <a href="/dashboard" >
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg width="58px" height="58px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <title>Group 2</title>
@@ -80,7 +85,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    Beroepenmagazine
+                                    Dashboard
                             </a>
                         </li>
 <!-- # -->
@@ -92,7 +97,7 @@
                                         <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g id="OpKop-Kwaliteitskaarten" transform="translate(-100.000000, -183.000000)">
                                                 <g id="Group-2" transform="translate(100.000000, 183.000000)">
-                                                    <circle id="Oval" fill="#00C866" cx="28.9999983" cy="28.9999983" r="28.9999983"></circle>
+                                                    <circle id="Oval" fill="#00C866" cx="28.9999983" cy="28.9999983" r="28.9999983">aaa</circle>
                                                     <g id="noun_Cards_1212866" transform="translate(8.000000, 16.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                                         <path d="M13.72944,17.76528 L13.72944,3.87504 L13.1808,2.92464 C12.89616,2.43216 12.37824,2.15616 11.84688,2.15616 C11.58624,2.15616 11.32224,2.2224 11.0808,2.36208 L0.76848,8.31552 C0.03456,8.73936 -0.21792,9.6816 0.20592,10.41552 L8.22816,24.31008 C8.652,25.044 9.59376,25.29696 10.32816,24.87264 L18.99456,19.86912 L15.83376,19.86912 C14.67312,19.86912 13.72944,18.92544 13.72944,17.76528 Z" id="Path"></path>
                                                         <path d="M42.28896,8.34048 L31.54848,3.1992 C30.78336,2.83392 29.86416,3.15792 29.49792,3.92208 L22.57104,18.3936 C22.5312,18.47664 22.50192,18.56208 22.47792,18.64896 C22.4688,18.6816 22.46352,18.71424 22.45632,18.74688 C22.44528,18.80016 22.43664,18.85392 22.43136,18.90768 C22.42704,18.94896 22.42416,18.99024 22.423634,19.032 C22.4232,19.07808 22.42656,19.12368 22.42992,19.16928 C22.43328,19.21392 22.43424,19.25808 22.44192,19.30272 L22.44192,19.30272 L22.44192,19.30272 C22.4568,19.39248 22.47696,19.48128 22.50768,19.56912 C22.644,19.95648 22.92336,20.26752 23.29392,20.44464 L34.0344,25.58592 C34.8,25.95264 35.71872,25.62768 36.08496,24.86304 L43.01232,10.39152 C43.3776,9.6264 43.05312,8.70624 42.28896,8.34048 Z" id="Path"></path>
@@ -107,7 +112,7 @@
                         </li>
 <!-- # -->                        
                         <li>
-                            <a href="https://opkop.nl/lob/sector-games" target="_blank">
+                            <a href="/matching">
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <title>Group 2</title>
@@ -120,12 +125,12 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    Sector games
+                                    Opdracht 2
                             </a>
                         </li>
 <!-- # -->                        
                         <li>
-                            <a href="https://opkop.nl/lob/beroepenevent" target="_blank">
+                            <a href="logout">
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <title>Beroepsevent in cirkel</title>
@@ -143,7 +148,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    Beroepenevent
+                                    Uitloggen
                             </a>
                         </li>
 <!-- # -->

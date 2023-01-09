@@ -28,12 +28,6 @@ if(!isset($_SESSION['userID']))
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="msapplication-TileColor" content="#FFFFFF" />
 <meta name="theme-color" content="#FFFFFF" />
-<meta name="twitter:title" content="Voor docenten" />
-<meta name="twitter:description" content="Op Kop heeft een contextrijk LOB voor het Voortgezet Onderwijs ontwikkeld. Het Beroepenevent Op Kop is hier onderdeel van. Op het Beroepenevent maken 3e-jaars leerlingen kennis met verschillende beroepen in deze regio. Voor, tijdens en na het Beroepenevent zijn er verschillende opdrachten voor de le..." />
-<meta property="og:site_name" content="Ontdek leren, werken en wonen in de Kop van Noord-Holland" />
-<meta property="og:description" content="Op Kop heeft een contextrijk LOB voor het Voortgezet Onderwijs ontwikkeld. Het Beroepenevent Op Kop is hier onderdeel van. Op het Beroepenevent maken 3e-jaars leerlingen kennis met verschillende beroepen in deze regio. Voor, tijdens en na het Beroepenevent zijn er verschillende opdrachten voor de le..." />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Voor docenten" />
 <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
 <meta http-equiv="x-ua-compatible" content="IE=edge" />
 <link rel="apple-touch-icon" sizes="180x180" href="../../media/meta/apple-touch-icon.png">
@@ -44,6 +38,7 @@ if(!isset($_SESSION['userID']))
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <link href="../../build/main.37bd3be40c1596c51a06.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2385044ba8.js" crossorigin="anonymous"></script>
 </head>
 <body class="no-hero opportunity-body lob-page">
     
