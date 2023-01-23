@@ -12,28 +12,8 @@ if(!isset($_SESSION['userID']))
 
      require('includes/database-connection.php');
 
-     $sID = $_SESSION['userID'];
-        
-     $sql = "SELECT * from users where ID = $sID";
-     //echo $sql;
-     $result = $con->query($sql);
-     
-     if ($result->num_rows > 0) {
-     // output data of each row
-       while($row = $result->fetch_assoc()) {
-                                    
-        if(empty($row['resettoken'])) {
-            header('Location: /change-password');
-             //$row['describe'] is empty
-        } 
-        }
-     }
-     else
-     {
 
-     } ?>                                
-     
-
+?>
 
 <!DOCTYPE html>
 <html lang="NL">
