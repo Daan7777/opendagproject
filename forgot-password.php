@@ -6,7 +6,7 @@ session_start();
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head >
     <meta charset="UTF-8">
-    <title>Login - Beroepenevent</title>
+    <title>Forgot password - Beroepenevent</title>
     <meta name="description" content="Op Kop heeft een contextrijk LOB voor het Voortgezet Onderwijs ontwikkeld. Het Beroepenevent Op Kop is hier onderdeel van. Op het Beroepenevent maken 3e-jaars leerlingen kennis met verschillende beroepen in deze regio. Voor, tijdens en na het Beroepenevent zijn er verschillende opdrachten voor de le..." />
     <meta name="robots" content="index, follow" />
     <meta name="apple-mobile-web-app-title" content="Ontdek leren, werken en wonen in de Kop van Noord-Holland" />
@@ -35,29 +35,23 @@ require('includes/header.php'); ?>
     <div class="o-section-sub">
         <div class="o-page">
             <div class="o-container">
-                <h1 class="u-primary u-center title-huge">Inloggen</h1>
+                <h1 class="u-primary u-center title-huge">Wachtwoord vergeten</h1>
                 <div class="default-form-wrapper">
-                    <h2 class="c-form-subtitle u-center">Vul hier je gegevens in</h2> 
+                    <h2 class="c-form-subtitle u-center">Vul hier je email in</h2> 
                     <div class="default-form">
                     <form action="/login-process" method="post">
-                        <input type="hidden" name="_csrf_token" value="nylLYbUSeIBK3atSBcSqbXrVRHv6Srt7y1uBcrfAIZE" />
                         <div class="c-form-row">
-                            <label for="username" class="c-form__label">Gebruikersnaam</label>
+                            <label for="username" class="c-form__label">Email</label>
                             <div class="c-form-row__input">
                                 <input type="text" id="email" name="email" value="" required="required" autocomplete="email" />
                             </div>
                         </div>
 
-                        <div class="c-form-row">
-                            <label for="password" class="c-form__label">Wachtwoord</label>
-                            <div class="c-form-row__input">
-                                <input type="password" id="password" name="password" required="required" autocomplete="password" />
-                            </div>
-                        </div>
+        
 
                         <div class="c-form-row">
-                            <a class="c-form-forgot-password c-form__label" href="/forgot-password">Wachtwoord vergeten?</a>
-                            <input class="c-login-submit c-btn c-btn--primary c-btn--rounded c-btn--compact" type="submit" id="_submit" name="_submit" value="Inloggen" />
+                        <a class="c-form-forgot-password c-form__label" href="/login">Wilt u inloggen klik hier?</a>
+                            <input class="c-login-submit c-btn c-btn--primary c-btn--rounded c-btn--compact" type="submit" id="_submit" name="_submit" value="Stuur wachtwoord reset" />
                         </div>
 
                     </form>

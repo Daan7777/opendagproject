@@ -105,11 +105,12 @@ $('input[type="button"]').click(function() {
                     <form name="fos_user_registration_form" method="post" action="/registreren" class="fos_user_registration_register" novalidate="novalidate">
                         <div  class="c-form-row">
                             <label for="fos_user_registration_form_zipcode" class="c-form__label">
-                                <div>Postcode</div>
+                                <div>Opmerking:</div>
                             </label>
-                            <div class="c-form-row__input" id="source" contenteditable="">
-                                <input type="text" id="fos_user_registration_form_zipcode" name="fos_user_registration_form[zipcode]" required="required" />
+                            <div style="width:200px; height:150px; border:1px solid #eee;box-shadow:inset 0 3px 5px 0 rgb(0 0 0 / 18%);font-family: L10;" class="c-form-row__input" id="source" contenteditable=""> 
+                                <span type="text" id="fos_user_registration_form_zipcode" name="fos_user_registration_form[zipcode]" required="required"> </span>
                             </div>
+
                         </div>
                         <!--   
                         <div  class="c-form-row">
@@ -171,7 +172,7 @@ $('input[type="button"]').click(function() {
                         -->
 
                         <div class="c-form-row c-form-row--indented">
-                            <input type="button" value="Informatie opslaan" class="c-btn c-btn--primary c-btn--rounded c-btn--compact" />
+                            <input type="submit" value="Informatie opslaan" class="c-btn c-btn--primary c-btn--rounded c-btn--compact" />
 
                         </div>
                         <input type="hidden" id="fos_user_registration_form_company" name="fos_user_registration_form[company]" />    

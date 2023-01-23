@@ -60,9 +60,15 @@ if(!isset($_SESSION['userID']))
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
                             <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
                         </a>
-                        <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
                             <span class="text"> &nbsp;Opmerkingen&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></span>        
                         </a>
+
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Foto's&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span>        
+                        </a>
+
+
                     </div>
                     <div class="lob-assignment__media">
                     <img src="/media/images/kies-beroep.png" alt="maak een keuze">
