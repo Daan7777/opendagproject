@@ -39,7 +39,7 @@ if ($stmt = $con->prepare('SELECT `EmailConfimed` FROM users WHERE email = ?')) 
          $_SESSION['account-backend-error'] = $trans['error-not-validated'];
          
          
-         header('Location: /login');
+         header('Location: /change-password');
             $stmt->close();
             return;
         }
