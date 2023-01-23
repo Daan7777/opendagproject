@@ -1,3 +1,8 @@
+<script>
+setTimeout(function(){
+   history.back();
+}, 3000);
+</script>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     return;
@@ -37,7 +42,10 @@ if ($stmt = $con->prepare('SELECT ID, Email, `Password`, middleName, FirstName, 
         $stmt->bind_result($ID, $email, $password, $middlename, $firstname, $lastname);
         $stmt->fetch();
 
-        echo $_POST['password'];
+        echo "Wachtwoord is incorrect, probeer het opnieuw.";
+    $_SESSION['password-error'] = "Wachtwoord is incorrect, probeer het opnieuw.";
+    header("Refresh: 3; URL='javascript:history.back()'");
+    return;
         if (password_verify($_POST['password'], $password)) {
 
             $_SESSION['loggedin'] = true;
