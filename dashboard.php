@@ -77,16 +77,27 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
   while($row = $result->fetch_assoc()) {
-?>                                
-                                
+
+                                if(strlen(trim($row['JobSector'])) > 0){
+                                    // $string has at least one non-space character
+                                ?>
                                 <label class="c-filter-radio">
-                                        <input  class="js-filter-radio js-filter-input-changer" type="radio" name="sector" value="<?php echo $row['JobSector']?>">
-                                        <span><?php echo $row['JobSector']?></span>
-                                    </label>
-<?php }
+                                    <input  class="js-filter-radio js-filter-input-changer" type="radio" name="sector" value="<?php echo $row['JobSector']?>">
+                                    <span><?php echo $row['JobSector']?></span>
+                                </label>
+                                <?php 
+                                } 
+                            else
+{
+
+}
+                            }
 }
 else
-{} ?>                                
+{
+
+} 
+?>                                
                                 
                                 </div>
                             </div>
@@ -103,13 +114,13 @@ if(isset($_GET['sector']) && !empty($_GET['sector'])){
     //if ($_SERVER["sector"] == null) {
     // no data passed by get
     $sector = $_GET['sector'];
-    $sql = "SELECT * FROM jobs where JobSector = '$sector' order by JobOrganisation";
-    $sql2 = "SELECT count(*) as aantal FROM jobs where JobSector = '$sector'";     
+    $sql = "SELECT distinct JobOrganisation, JobSector, OrganisationURL FROM jobs where JobSector = '$sector' order by JobOrganisation";
+    $sql2 = "SELECT  count(distinct JobOrganisation) as aantal FROM jobs where JobSector = '$sector'";     
 }
 else
 {
-    $sql = "SELECT * FROM jobs order by JobOrganisation";
-    $sql2 = "SELECT count(*) as aantal FROM jobs";     
+    $sql = "SELECT distinct JobOrganisation, JobSector, OrganisationURL  FROM jobs order by JobOrganisation";
+    $sql2 = "SELECT count(distinct JobOrganisation) as aantal FROM jobs";     
 }
 
 
@@ -145,7 +156,7 @@ if ($result->num_rows > 0) {
             <h3 class="c-opportunity__title"><?php echo $row['JobOrganisation']?></h3>
             <div class="c-opportunity__props">
                 <span class="c-opportunity__prop c-opportunity__prop--type"><?php echo $row['JobSector']?></span>
-                <span class="c-opportunity__prop c-opportunity__prop--location"><?php echo $row['JobLocation']?></span>
+                
             </div>
             <span class="c-opportunity__external">
                 <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g class="svg-color" id="Bekijk-op-funda" transform="translate(-180.000000, -16.000000)" fill="#00C866" fill-rule="nonzero"><path d="M196,32 L182,32 L182,18 L189,18 L189,16 L182,16 C180.89,16 180,16.9 180,18 L180,32 C180,33.1 180.89,34 182,34 L196,34 C197.1,34 198,33.1 198,32 L198,25 L196,25 L196,32 Z M191,16 L191,18 L194.59,18 L184.76,27.83 L186.17,29.24 L196,19.41 L196,23 L198,23 L198,16 L191,16 Z" id="Shape"></path></g></g></svg>
