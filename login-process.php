@@ -45,7 +45,6 @@ if ($stmt = $con->prepare('SELECT ID, Email, `Password`, middleName, FirstName, 
         echo "Wachtwoord is incorrect, probeer het opnieuw.";
     $_SESSION['password-error'] = "Wachtwoord is incorrect, probeer het opnieuw.";
     header("Refresh: 3; URL='javascript:history.back()'");
-    return;
         if (password_verify($_POST['password'], $password)) {
 
             $_SESSION['loggedin'] = true;
