@@ -26,25 +26,7 @@ $lastname = null;
 $class = null;
 $ID = null; 
 
-$e_confimed = 0;
-if ($stmt = $con->prepare('SELECT `EmailConfimed` FROM users WHERE email = ?')) {
-    $stmt->bind_param('s', $_POST['email']);
-    $stmt->execute();
-    $stmt->store_result();
-    if ($stmt->num_rows > 0){
-        $stmt->bind_result($e_confimed);
-        $stmt->fetch();
-        if($e_confimed == 0){
-         //   $_SESSION['account-backend-error'] = 'Account nog niet geactiveerd';
-         $_SESSION['account-backend-error'] = $trans['error-not-validated'];
-         
-         
-         header('Location: /change-password');
-            $stmt->close();
-            return;
-        }
-    }
-}
+
 
 if ($stmt = $con->prepare('SELECT ID, Email, `Password`, middleName, FirstName, LastName FROM users WHERE email = ?')) {
     $stmt->bind_param('s', $_POST['email']);
@@ -72,7 +54,27 @@ if ($stmt = $con->prepare('SELECT ID, Email, `Password`, middleName, FirstName, 
             $stmt->execute();
             $stmt->close();
             
+            $e_confimed = 0;
+            if ($stmt = $con->prepare('SELECT `EmailConfimed` FROM users WHERE email = ?')) {
+                $stmt->bind_param('s', $_POST['email']);
+                $stmt->execute();
+                $stmt->store_result();
+                if ($stmt->num_rows > 0){
+                    $stmt->bind_result($e_confimed);
+                    $stmt->fetch();
+                    if($e_confimed == 0){
+                     //   $_SESSION['account-backend-error'] = 'Account nog niet geactiveerd';
+                     $_SESSION['account-backend-error'] = $trans['error-not-validated'];
+                     
+                     
+                     header('Location: /change-password?status=no');
+                        $stmt->close();
+                        return;
+                    }
+                }
 
+                
+            }
 
 
             header('Location: /dashboard');

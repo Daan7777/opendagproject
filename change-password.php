@@ -76,7 +76,24 @@ $('input[type="button"]').click(function() {
             <div class="o-container">
                 <div class="form-steps">
                     <div class="form-steps__sidebar">
-                        <h2>Pas het standaard wachtwoord aan <span class="u-primary">minimaal 8 tekens    .</span></h2>
+                        <h2>
+                            <?php   
+                   
+                    
+
+                   if(isset($_GET['status'])){
+                    $status = $_GET['status'];
+                    if($status == "no"){
+                        echo "Pas uw wachtwoord aan, hierna is die geactiveerd";
+                    }
+                  } else {
+                    echo "Pas uw wachtwoord hier aan";
+                  }
+
+      
+
+                            ?>
+                        </h2>
                         <ol class="form-steps__steps">
                             <li class="is-active">Pas je wachtwoord aan</li>
                             <li class="">Dit slaan wij dan voor je op</li>

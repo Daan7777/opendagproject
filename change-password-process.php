@@ -30,7 +30,7 @@ echo "hashed password is" .$hashed_password."<br>";
 echo "user is" .$UserID."<br>";
 
 
-$stmt = $con->prepare('UPDATE users SET password=? ,resettoken="1"  WHERE ID = ?');
+$stmt = $con->prepare('UPDATE users SET password=? ,resettoken="1",EmailConfimed="1"  WHERE ID = ?');
 $stmt->bind_param('si', $hashed_password, $_POST['UserID']);
 $stmt->execute();
 $stmt->close();
