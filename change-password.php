@@ -11,10 +11,6 @@ if(!isset($_SESSION['userID']))
      }
 
      require('includes/database-connection.php');
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -60,14 +56,9 @@ $('input[type="button"]').click(function() {
 });
 </script>
 
-
-
-
 </head>
 <body class="no-hero">    
 <?php require('includes/header.php'); ?>
-
-
 
 <!-- A -->
 <div class="page-wrap">
@@ -83,15 +74,15 @@ $('input[type="button"]').click(function() {
 
                    if(isset($_GET['status'])){
                     $status = $_GET['status'];
+                    
+
                     if($status == "no"){
-                        echo "Pas uw wachtwoord aan, hierna is het geactiveerd";
+                        echo "Pas uw wachtwoord hier aan";
+                        $_SESSION['status'] = "reset";
                     }
                   } else {
                     echo "Pas uw wachtwoord hier aan";
                   }
-
-      
-
                             ?>
                         </h2>
                         <ol class="form-steps__steps">
@@ -102,7 +93,7 @@ $('input[type="button"]').click(function() {
                         </ol>
                     </div>
                     <div class="form-steps__step">
-                    <h2 class="u-center">Wachtwoord aanpassen</h2>   
+                    <h2 class="u-center">Hierna is uw account geactiveerd</h2>   
                     
                     <form name="change-password" method="post" action="/change-password-process" class="" >
                         <div  class="c-form-row">
