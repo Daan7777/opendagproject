@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="NL">
@@ -37,7 +38,30 @@ require('includes/header.php'); ?>
             <div class="o-container">
                 <h1 class="u-primary u-center title-huge">Inloggen</h1>
                 <div class="default-form-wrapper">
-                    <h2 class="c-form-subtitle u-center">Vul hier je gegevens in</h2> 
+                    
+                <?php   
+
+                   if(isset($_SESSION['status'])){
+                    $status = $_SESSION['status'];
+                    
+
+                    if($status == "reset"){
+                      ?>
+                      <h2 class="c-form-subtitle u-center">Uw wachtwoord is aangepast, log nu in</h2> 
+                      <?php
+                        
+                    }
+                  } else {
+                    ?>
+                      <h2 class="c-form-subtitle u-center">Vul hier je gegevens in</h2> 
+                    <?php
+                  }        ?>    
+                
+             
+                    
+                    
+                    
+                    
                     <div class="default-form">
                     <form action="/login-process" method="post">
                         <input type="hidden" name="_csrf_token" value="nylLYbUSeIBK3atSBcSqbXrVRHv6Srt7y1uBcrfAIZE" />
