@@ -125,7 +125,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    Opdracht 2
+                                    Mijn beroepen 
                             </a>
                         </li>
 <!-- # -->                        

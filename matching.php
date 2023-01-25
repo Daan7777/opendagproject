@@ -12,8 +12,24 @@ if(!isset($_SESSION['userID']))
 
      require('includes/database-connection.php');
 
+$id = $_SESSION['userID'];
+$sql = "SELECT count(*) as aantal FROM matches where UserID = $id ";
+$sql2 = "SELECT * FROM matches where UserID = $id ";
 
-?>
+$result = $con->query($sql);
+
+$result2 = $con->query($sql2);
+
+if ($result->num_rows > 0) {
+// output data of each row
+  while($row = $result->fetch_assoc()) {
+?>                                    
+                              <?php echo $row['aantal']?>
+<?php }
+}
+else
+{} ?>  
+
 
 <!DOCTYPE html>
 <html lang="NL">
@@ -51,12 +67,17 @@ if(!isset($_SESSION['userID']))
         
         <div class="o-container">
             <div class="lob-assignments u-padding-top">
+
+
+
+
+            
                       
 <!-- MATCH 1 -->
                 <div class="lob-assignment">
                     <div class="lob-assignment__content">
                         <h2 class="lob-assignment__label">Beroep 1</h2>
-                        <p>eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                        <p>Scan hieronder de QR-code, voeg daarna een opmerking & foto's toe waarom dit beroep jou aanspreekt. </p>
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
                             <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
                         </a>
@@ -71,7 +92,7 @@ if(!isset($_SESSION['userID']))
 
                     </div>
                     <div class="lob-assignment__media">
-                    <img src="/media/images/kies-beroep.png" alt="maak een keuze">
+                    <img src="/media/images/lob/techniek-groot.png" alt="maak een keuze">
                     </div>
                 </div>
 
@@ -80,13 +101,21 @@ if(!isset($_SESSION['userID']))
                 <div class="lob-assignment reversed">
                     <div class="lob-assignment__content">
                         <h2 class="lob-assignment__label">Beroep 2</h2>
-                        <p>eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                        <p>Scan hieronder de QR-code, voeg daarna een opmerking & foto's toe waarom dit beroep jou aanspreekt. </p>
+
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
-                        <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
+                            <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
+                        </a>
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Opmerkingen&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></span>        
+                        </a>
+
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Foto's&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span>        
                         </a>
                     </div>
                     <div class="lob-assignment__media">
-                    <img src="/media/images/kies-beroep.png" alt="maak een keuze">
+                    <img src="/media/images/lob/techniek-banner500x500.jpg" alt="maak een keuze">
                     </div>
                 </div>
 
@@ -95,11 +124,17 @@ if(!isset($_SESSION['userID']))
                 <div class="lob-assignment">
                     <div class="lob-assignment__content">
                         <h2 class="lob-assignment__label">Beroep 3</h2>
-                        <p>eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                        <p>Scan hieronder de QR-code, voeg daarna een opmerking & foto's toe waarom dit beroep jou aanspreekt. </p>
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
-                        <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
+                            <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
                         </a>
-                    </div>
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Opmerkingen&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></span>        
+                        </a>
+
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Foto's&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span>        
+                        </a>              </div>
                     <div class="lob-assignment__media">
                     <img src="/media/images/kies-beroep.png" alt="maak een keuze">
                     </div>
@@ -110,11 +145,17 @@ if(!isset($_SESSION['userID']))
 <div class="lob-assignment reversed">
                     <div class="lob-assignment__content">
                         <h2 class="lob-assignment__label">Beroep 4</h2>
-                        <p>eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                        <p>Scan hieronder de QR-code, voeg daarna een opmerking & foto's toe waarom dit beroep jou aanspreekt. </p>
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
-                        <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
+                            <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
                         </a>
-                    </div>
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Opmerkingen&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></span>        
+                        </a>
+
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Foto's&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span>        
+                        </a>   </div>
                     <div class="lob-assignment__media">
                     <img src="/media/images/kies-beroep.png" alt="maak een keuze">
                     </div>
@@ -125,11 +166,17 @@ if(!isset($_SESSION['userID']))
                 <div class="lob-assignment">
                     <div class="lob-assignment__content">
                         <h2 class="lob-assignment__label">Beroep 5</h2>
-                        <p>eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veliteque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                        <p>Scan hieronder de QR-code, voeg daarna een opmerking & foto's toe waarom dit beroep jou aanspreekt. </p>
                         <a href="#" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
-                        <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
+                            <span class="text">Scan QR-Code <i class="fa fa-qrcode" aria-hidden="true"></i></span>        
                         </a>
-                    </div>
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Opmerkingen&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></span>        
+                        </a>
+
+                        <a href="job-info" class="c-btn c-btn--compact c-btn--rounded c-btn--primary">
+                            <span class="text"> &nbsp;Foto's&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span>        
+                        </a>       </div>
                     <div class="lob-assignment__media">
                         <img src="/media/images/kies-beroep.png" alt="maak een keuze">
                     </div>

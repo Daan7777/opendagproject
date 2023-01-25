@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <span class="lob-footer-by">Website door <a href="#" target="_blank" style="color: #fff;">VONKNH</a></span>
+                <span class="lob-footer-by">Website gerealiseerd door de studenten van de opleiding  Software Developer van  <a href="http://www.vonknh.nl/group/1/content/54" target="_blank" style="color: #fff;">Vonk.</a></span>
             </div>
         </div>
     </div>

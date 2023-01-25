@@ -84,7 +84,7 @@ $('input[type="button"]').click(function() {
                    if(isset($_GET['status'])){
                     $status = $_GET['status'];
                     if($status == "no"){
-                        echo "Pas uw wachtwoord aan, hierna is het geactiveerd";
+                        echo "Pas uw wachtwoord aan, hierna kunt u inloggen";
                     }
                   } else {
                     echo "Pas uw wachtwoord hier aan";
